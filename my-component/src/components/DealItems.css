@@ -1,0 +1,60 @@
+.section-items{
+    width:1254px;
+    margin:0 auto;
+    margin-top:20px;
+    background-color: var(--color-white);
+}
+
+.container{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    justify-content:center;
+}
+
+.deals-item-container{
+    margin-top: 30px;
+    margin-bottom:20px;
+    gap: 45px;
+    justify-content:space-between;
+}
+
+.item-container{
+    display:flex;
+    flex-direction: column;
+    gap:0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.deals-item{
+    gap: 8px;
+}
+
+.item-title:link,
+.item-title:visited{
+    text-decoration: none;
+    color:var(--color-black);
+    display:inline-block;
+    font-size:14px;
+    font-weight: 500;
+    margin-top:12px;
+}
+.item-title:hover,
+.item-title:active{
+    color:var(--color-black);
+}
+
+.prices:link,
+.prices:visited{
+    color:#388e3c;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.about:link,
+.about:visited{
+    color:var(--color-dark-grey);
+    text-decoration:none;
+    font-size:14px;
+}
