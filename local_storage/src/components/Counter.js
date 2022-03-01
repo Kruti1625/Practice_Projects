@@ -3,7 +3,7 @@ import useLocalStorage from "../hooks/useLocalStorage";
 import "./Counter.css";
 
 const Counter = () => {
-  const { state, plusHandler } = useLocalStorage(0);
+  const [state, plusHandler] = useLocalStorage("value", 0);
 
   return (
     <div className="container">

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-const useLocalStorage = (initValue) => {
+const useLocalStorage = (key, initValue) => {
   const [state, setState] = useState(
-    JSON.parse(localStorage.getItem("value")) || initValue
+    JSON.parse(localStorage.getItem(key)) || initValue
   );
 
   const plusHandler = () => {
@@ -10,12 +10,9 @@ const useLocalStorage = (initValue) => {
   };
 
   useEffect(() => {
-    localStorage.setItem("value", JSON.stringify(state));
-  }, [state]);
+    localStorage.setItem(key, JSON.stringify(state));
+  }, [state, key]);
 
-  return {
-    plusHandler,
-    state,
-  };
+  return [state, plusHandler];
 };
 export default useLocalStorage;
